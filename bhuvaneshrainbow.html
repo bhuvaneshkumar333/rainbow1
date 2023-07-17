@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-top:130px;
+            background-color: rgb(3, 231, 247);
+        }
+        button{
+            cursor: pointer;
+            background-color: rgb(245, 3, 120);
+        }
+        button:hover{
+            transform:skew(10 deg);
+        }
+    </style>
+</head>
+<body>
+    <button>click me!</button>
+    <script>
+        const btn=document.querySelector('button');
+        const body=document.querySelector('body');
+        const color=['Green','pink','blue','red','yellow','aquablue','pappyawhipe'];
+     document.addEventListener('click',function(){
+        const colorIndex=parseInt(Math.random()*color.length);
+        body.style.backgroundColor=color[colorIndex];
+     });
+    </script>
+</body>
+</html>
